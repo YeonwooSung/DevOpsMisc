@@ -8,6 +8,10 @@ In GCP, you could add a startup script to the compute engine so that whenever th
 
 - [Startup script](./compute_engine/gcp_startup_script.sh)
 
+## Cloud Function
+
+Please refer to [this page](./cloud_function).
+
 ## Dialogflow
 
 Dialogflow is Google's natural language understanding tool for building conversational experiences, such as voice apps and chatbots, powered by AI.
