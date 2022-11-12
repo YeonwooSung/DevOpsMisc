@@ -18,3 +18,8 @@ Dialogflow is Google's natural language understanding tool for building conversa
 - [detect intent by text input](./dialoglow/dialoglow-cx/detect_intent.py)
 - [detect intent by text input, and return audio by using tts](./dialogflow/dialoglow-cx/detect_intent_tts.py)
 - [detect intent by audio input, and return audio by using tts](./dialogflow/dialoglow-cx/detect_intent_sts.py)
+
+### Dialogflow ES
+
+- [detect intent with tts](./dialogflow/dialogflow-es/detect_text_to_speech.py)
+- [simple chatbot by using dialogflow es](./dialogflow/dialogflow-es/main.py)
