@@ -90,3 +90,53 @@ The network usage can be measured by using the `iftop` command.
 ```bash
 $ iftop
 ```
+
+## Performance measurement of a backend server
+
+### wrk
+
+The `wrk` command is a HTTP benchmarking tool.
+
+```bash
+# assume that the backend server is located at localhost with 8080 port
+
+# generate 400 HTTP connections with 12 threads for 5 seconds
+$ wrk -t 12 -c 400 -d 5 http://localhost:8080
+
+# generate 10 HTTP connections for 5 seconds
+$ wrk -c 10 -d 5 http://localhost:8080
+
+# generate 10 HTTP connections for 5 seconds with detailed latency statistics
+$ wrk -c 10 -d 5 --latency http://localhost:8080
+```
+
+The following is the description of each option.
+
+* -t: The number of threads.
+* -c: The number of connections.
+* -d: The duration of the test.
+* --latency: Measure latency with more detailed statistics.
+
+### wrk2
+
+The `wrk2` command is a HTTP benchmarking tool.
+
+```bash
+# assume that the backend server is located at localhost with 8080 port
+
+# generate 400 HTTP connections with 12 threads for 5 seconds
+$ wrk2 -t 12 -c 400 -d 5 http://localhost:8080
+
+# generate 10 HTTP connections for 5 seconds
+$ wrk2 -c 10 -d 5 http://localhost:8080
+
+# generate 10 HTTP connections for 5 seconds with detailed latency statistics
+$ wrk2 -c 10 -d 5 --latency http://localhost:8080
+```
+
+The following is the description of each option.
+
+* -t: The number of threads.
+* -c: The number of connections.
+* -d: The duration of the test.
+* --latency: Measure latency with more detailed statistics.
