@@ -67,6 +67,12 @@ docker images
 docker ps -a
 ```
 
+## Stop a container
+
+```bash
+docker stop <container_id>
+```
+
 ## Remove a container
 
 ```bash
