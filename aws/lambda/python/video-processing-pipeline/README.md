@@ -69,6 +69,32 @@ You should consider all of them first, and choose the most optimal one for your 
 
 ## 3. Extract information from selected frames by using Rekognition API
 
+After filtering images we are now ready to extract information from the images.
+The filtered images are stored in a bucket and ready for processing by rekognition.
+
+Create a lambda function and set trigger to the bucket where you have uploaded your filtered image.
+The moment we upload the filtered images to this bucket our third lambda function will be initiated.
+
+Now to upload our results from rekognition we will create a firehose stream using kinesis.
+We are creating a delivery stream because we want to deliver our results to a s3 bucket for further analysis.
+The only thing important here is setting the stream name as you wish and choosing the destination bucket of your choice for storing the results.
+After this we are now ready to edit our lambda function.
+
+The code for the lambda function could be found [here](./call_rekognition_for_further_analysis.py).
+As you could see in the code, we are calling the `detect_faces` function from rekognition API.
+It will return all faces and along with them attributes identified such as age, gender, emotions, whether wearing a sunglass or not etc.
+To learn more about the `detect_faces` function of the rekognition API, refer to [this link](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html#Rekognition.Client.detect_faces).
+
+In the lambda function, we loop over all faces returned by detect_face and gather information required in a variable called payload and use firehose stream client to put the records in our target s3 bucket.
+Remember the target is what you set while creating kinesis delivery stream.
+
+Once you put filtered image in your source bucket this function should execute and you should see the results in your target bucket.
+
+You can have a look at your results in the target s3 bucket.
+
+As an extension, we could add more lambda functions with other features of rekognition API, such as `search_faces_by_image` and `compare_faces` to identify the person in the image.
+By orchestrating these functions we can create an AI-powered SaaS pipeline for video processing.
+
 ## References
 
 [1] [Creating a Video Processing Pipeline in AWS](https://medium.com/@khitish19/creating-a-video-processing-pipeline-in-aws-a224b4a431de)
@@ -76,3 +102,5 @@ You should consider all of them first, and choose the most optimal one for your 
 [2] [Creating a Video Processing Pipeline in AWS... Part2](https://medium.com/@khitish19/creating-a-video-processing-pipeline-in-aws-part-2-2c861aca0b19)
 
 [3] [Creating a Video Processing Pipeline in AWS... Part3](https://medium.com/@khitish19/creating-a-video-processing-pipeline-in-aws-part-3-d0c3818562bd)
+
+[4] [Rekognition API document](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html)
