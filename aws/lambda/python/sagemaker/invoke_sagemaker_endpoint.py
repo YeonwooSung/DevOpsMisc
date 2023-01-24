@@ -16,7 +16,8 @@ IMAGE_LOCATION = "<S3 PATH TO IMAGE>/image.png"
 
 # INFERENCE ENDPOINT DETAILS
 ENDPOINT_NAME = 'MY_SAGEMAKER_ENDPOINT_NAME'
-config = botocore.config.Config(read_timeout=80)
+_inference_waiting_timeout = 80
+config = botocore.config.Config(read_timeout=_inference_waiting_timeout)
 runtime = boto3.client('runtime.sagemaker', config=config)
 modelHeight, modelWidth = 640, 640
 
