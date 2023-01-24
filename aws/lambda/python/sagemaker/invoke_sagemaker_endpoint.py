@@ -2,7 +2,8 @@
 
 import os, logging, json, time, urllib.parse
 import boto3, botocore
-import numpy as np, cv2
+import numpy as np
+import cv2
 
 
 logger = logging.getLogger()
