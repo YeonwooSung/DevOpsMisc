@@ -14,7 +14,12 @@ def lambda_handler(event, context):
     try:
         s3_response = s3.put_object(Bucket=BUCKET_NAME, Key=file_path, Body=file_content)
     except Exception as e:
-        raise IOError(e)
+        return {
+            'statusCode': 500,
+            'body': {
+                'error': str(e)
+            }
+        }
     return {
         'statusCode': 200,
         'body': {
