@@ -1,6 +1,14 @@
 # AWS DevOps
 
-## Lambda codes for Cloudtrail logs to Elasticsearch
+AWS provides an [official document sdk example repository on Github](https://github.com/awsdocs/aws-doc-sdk-examples), so please check out for awesome features.
+
+## Lambda
+
+AWS lambda is a serverless, event-driven compute service that lets you run code for virtually any type of application or backend service without provisioning or managing servers.
+
+For example codes for lambda, please refer [here](./lambda/)
+
+### Lambda codes for Cloudtrail logs to Elasticsearch
 
 This CloudFormation template creates:
 
@@ -22,3 +30,9 @@ Lambda function code that writes data to AWS Elasticsearch domain.
 Required by CloudFormation during the stack creation. It updates the Elasticsearch cluster access policy with the IP of the Nginx reverse proxy. It also updates the code of the LogsToElasticsearch function so it points to the URL of the recently created AWS Elasticsearch cluster.
 
 This function uses the [node-zip](https://github.com/daraosn/node-zip) module to generate .zip files that are required by Lambda when setting the function code. If you really want to modify this function, you would have to instal node-zip and create a deployment package for Lambda.
+
+## S3
+
+Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance.
+
+For example codes for S3, please refer [here](./s3/).
