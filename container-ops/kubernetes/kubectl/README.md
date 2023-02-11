@@ -19,4 +19,7 @@ To install the `kubectl` follow the instructions in the corresponding documentat
 
 ## Scripts
 
-- [Get all pods](./scripts/get_all_pods.sh)
+- Get pods
+    - [Get all pods](./scripts/get_all_pods.sh)
+    - [Get all pods with expanded output](./scripts/get_pods_with_expanded_outputs.sh)
+    - [Get all pods with a given namespace](./scripts/get_all_pods_in_namespace.sh)
