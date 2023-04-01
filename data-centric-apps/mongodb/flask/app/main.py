@@ -5,9 +5,9 @@ import pymongo
 
 app = Flask(__name__)
 
-mongo_url = 'mongodb://' + os.environ['MONGODB_USERNAME'] + ':' + os.environ['MONGODB_PASSWORD'] + '@' + os.environ['MONGODB_HOSTNAME'] + ':27017/' + os.environ['MONGODB_DATABASE']
-mongo = pymongo.MongoClient("mongodb://mongo:27017/")
-db = mongo.db
+mongo_url = 'mongodb://' + os.environ['MONGODB_USERNAME'] + ':' + os.environ['MONGODB_PASSWORD'] + '@localhost:27017/'
+mongo = pymongo.MongoClient(mongo_url)
+db = mongo['flaskdb']
 
 
 @app.route("/")
@@ -20,7 +20,7 @@ def createTodo():
     item = {
         'todo': data['todo']
     }
-    db.todo.insert_one(item)
+    db['todo'].insert_one(item)
 
     return jsonify(
         status=True,
