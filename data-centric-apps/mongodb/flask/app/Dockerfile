@@ -11,11 +11,11 @@ ADD . /var/www/
 RUN pip install -r requirements.txt
 RUN pip install gunicorn
 
-RUN addgroup --gid $GROUP_ID www
-RUN adduser --uid $USER_ID --ingroup www --shell /bin/sh www
+#RUN addgroup --gid $GROUP_ID www
+#RUN adduser --uid $USER_ID --ingroup www --shell /bin/sh www
 #RUN adduser -D -u $USER_ID -G www www -s /bin/sh
 
-USER www
+#USER www
 
 EXPOSE 5000 8000
 
