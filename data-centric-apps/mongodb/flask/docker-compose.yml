@@ -24,7 +24,6 @@ services:
     depends_on:
       - mongodb
     networks:
-      - frontend
       - backend
 
   mongodb:
@@ -71,7 +70,8 @@ networks:
   frontend:
     driver: bridge
   backend:
-    driver: bridge
+    # driver: bridge
+    external: true
 
 volumes:
   mongodbdata:
