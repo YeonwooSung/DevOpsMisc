@@ -17,6 +17,6 @@ RUN adduser --uid $USER_ID --ingroup www --shell /bin/sh www
 
 USER www
 
-EXPOSE 5000
+EXPOSE 5000 8000
 
 CMD [ "gunicorn", "-w", "4", "--bind", "0.0.0.0:5000", "main:app"]
