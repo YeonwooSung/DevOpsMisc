@@ -30,3 +30,5 @@ We could deploy one or more Pods in a single Node. And the entire Kubernetes clu
 ![K8s cluster](./imgs/k8s_cluster.png)
 
 ## Additional Resources
+
+- [Kubernetes CronJob의 스케줄 변경 시 소급 적용된다?](https://blog.outsider.ne.kr/1662)
