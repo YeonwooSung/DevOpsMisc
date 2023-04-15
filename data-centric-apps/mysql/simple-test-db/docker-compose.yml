@@ -1,6 +1,6 @@
 version: '3'
 services:
-  hype-testDB:
+  test-db:
     image: mysql:8.0
     ports:
       - 3306:3306
