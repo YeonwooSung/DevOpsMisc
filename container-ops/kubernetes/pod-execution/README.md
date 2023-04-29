@@ -1,4 +1,4 @@
-# Execute application containers on the kubernetes cluster
+# Execute Pod with application containers on the kubernetes cluster
 
 - [Execute container with resource limits](./src/pod-with-resource-limits.yaml)
 - [Execute container with command args](./src/pod-with-start-command.yaml)
