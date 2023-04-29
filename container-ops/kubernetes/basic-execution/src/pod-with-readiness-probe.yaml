@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myApp
+
+spec:
+  containers:
+  - name: my-app
+    image: mydockername
+    command: ["run"]
+
+    ports:
+    - containerPort: 8080
+
+    resources:
+      # Requests are what the container is guaranteed to get. (minimum)
+      requests:
+        memory: "50Mi"
+        cpu: "100m"
+      # Limits make sure a container never goes above a certain value. (maximum)
+      limits:
+        memory: "200Mi"
+        cpu: "500m"
+
+    # the readiness probe is used to check if the container is ready to receive traffic
+    readinessProbe:
+      exec:
+        command:
+        - cat
+        - /tmp/thisfileshouldexist.txt
+      initialDelaySeconds: 5
+      periodSeconds: 5
