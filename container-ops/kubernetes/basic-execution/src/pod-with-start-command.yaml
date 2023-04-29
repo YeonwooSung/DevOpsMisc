@@ -8,3 +8,12 @@ spec:
     image: mydockername
     command: ["run"]
     args: ["--flag", "T", "--run-type", "static"]
+    resources:
+      # Requests are what the container is guaranteed to get. (minimum)
+      requests:
+        memory: "50Mi"
+        cpu: "100m"
+      # Limits make sure a container never goes above a certain value. (maximum)
+      limits:
+        memory: "200Mi"
+        cpu: "500m"
