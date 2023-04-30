@@ -29,6 +29,42 @@ We could deploy one or more Pods in a single Node. And the entire Kubernetes clu
 
 ![K8s cluster](./imgs/k8s_cluster.png)
 
+- [Execute pod](./pod-execution/)
+- [Replica Set](./replicaset/)
+- [Deployment](./deployment/)
+
+### Pod Scaling
+
+There are multiple ways for scaling Pods.
+
+The most straightforward way is to manually scale the number of Pods by using `kubectl scale` command.
+
+```bash
+$ kubectl scale --replicas=3 deployment/myapp-deployment
+```
+
+Another way is to use `Horizontal Pod Autoscaler` (HPA) which automatically scales the number of Pods based on CPU utilization.
+
+```bash
+$ kubectl autoscale deployment/myapp-deployment --min=2 --max=5 --cpu-percent=80
+```
+
+### DaemonSet
+
+A DaemonSet ensures that all (or some) Nodes run a copy of a Pod.
+As nodes are added to the cluster, Pods are added to them.
+As nodes are removed from the cluster, those Pods are garbage collected.
+Deleting a DaemonSet will clean up the Pods it created.
+
+Some typical uses of a DaemonSet are:
+
+    * running a cluster storage daemon on every node
+    * running a logs collection daemon on every node
+    * running a node monitoring daemon on every node
+
+In a simple case, one DaemonSet, covering all nodes, would be used for each type of daemon.
+A more complex setup might use multiple DaemonSets for a single type of daemon, but with different flags and/or different memory and cpu requests for different hardware types.
+
 ## Additional Resources
 
 - [Kubernetes CronJob의 스케줄 변경 시 소급 적용된다?](https://blog.outsider.ne.kr/1662)
