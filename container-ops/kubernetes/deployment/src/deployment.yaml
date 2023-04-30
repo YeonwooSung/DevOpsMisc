@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp-container
+        image: nginx
+        resources:
+          # Requests are what the container is guaranteed to get. (minimum)
+          requests:
+            memory: "100Mi"
+            cpu: "1000m"
+          # Limits make sure a container never goes above a certain value. (maximum)
+          limits:
+            memory: "300Mi"
+            cpu: "2000m"
