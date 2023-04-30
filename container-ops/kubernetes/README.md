@@ -32,6 +32,7 @@ We could deploy one or more Pods in a single Node. And the entire Kubernetes clu
 - [Execute pod](./pod-execution/)
 - [Replica Set](./replicaset/)
 - [Deployment](./deployment/)
+- [Jobs](./jobs/)
 
 ### Pod Scaling
 
@@ -86,10 +87,6 @@ StatefulSets are valuable for applications that require one or more of the follo
     * Ordered, automated rolling updates.
 
 - [Example StatefulSet for NGINX](./statefulset-nginx.yaml)
-
-## Additional Resources
-
-- [Kubernetes CronJob의 스케줄 변경 시 소급 적용된다?](https://blog.outsider.ne.kr/1662)
 
 ## References
 
