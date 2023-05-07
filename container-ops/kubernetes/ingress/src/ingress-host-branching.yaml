@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: multiple-branches-ingress
+spec:
+  rules:
+  - host: my.application.com
+    http:
+      paths:
+      - path: /a
+        pathType: Prefix
+        backend:
+          pathType:
+          serviceName: service-a
+          servicePort: 80
+  - host: my.otherapplication.com
+    http:
+      paths:
+      - path: /b
+        pathType: Prefix
+        backend:
+          serviceName: service
+          servicePort: 80

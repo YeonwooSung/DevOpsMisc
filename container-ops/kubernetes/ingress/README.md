@@ -15,6 +15,16 @@ This is useful if you’re running multiple cluster controllers.
 
 - [Simple NGINX based Ingress](./src/nginx_ingress.yaml)
 
+## Use ingress for serving multiple applications
+
+Let's assume that we have 2 applications([service a](./src/service-a.yaml) and [service b](./src/service-b.yaml)) running in our cluster.
+
+We could route each incoming request to corresponding service by using ingress based on predefined rules.
+
+- [Ingress for specifing multiple services with paths](./src/ingress-no-host.yaml)
+- [Ingress for host-based branching](./src/ingress-host-branching.yaml)
+- [Ingress for SSL/TLS connection](./src/ingress-with-secret.yaml)
+
 ## References
 
 - [Kubernetes Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
