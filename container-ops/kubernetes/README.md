@@ -33,6 +33,8 @@ We could deploy one or more Pods in a single Node. And the entire Kubernetes clu
 - [Replica Set](./replicaset/)
 - [Deployment](./deployment/)
 - [Jobs](./jobs/)
+- [Service](./service/)
+- [Ingress](./ingress/)
 
 ### Pod Scaling
 
