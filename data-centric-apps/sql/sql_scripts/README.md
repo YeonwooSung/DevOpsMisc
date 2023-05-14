@@ -19,3 +19,7 @@ Defining SQL scripts for a simple order service.
         * [Create Indexes for Customer table](./order_service/create_customer_index.access.sql)
     - SQL Server
         * [Create Indexes for Customer table](./order_service/create_customer_index.sqlserver.sql)
+    - Oracle
+        * [Create Indexes for Customer table](./order_service/create_customer_index.oracle.sql)
+    - PostgreSQL
+        * [Create Indexes for Customer table](./order_service/create_customer_index.postgresql.sql)
