@@ -4,13 +4,14 @@ The miscellaneous codes for DevOps
 
 ## Cloud
 
-1. [AWS](./aws)
+- [AWS](./aws)
+- [GCP](./gcp)
+- [Docker](./container-ops/docker)
 
-2. [GCP](./gcp)
+## Container-based DevOps
 
-3. [Docker](./container-ops/docker)
-
-4. [Kubernetes](./container-ops/kubernetes)
+- [Kubernetes](./container-ops/kubernetes)
+- [Docker](./container-ops/docker)
 
 ## Workflows
 
