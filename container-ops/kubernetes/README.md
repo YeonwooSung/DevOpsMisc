@@ -7,6 +7,17 @@ K8s(Kubernetes) is a container orchestration system. It is a system for managing
 - [Pod](#pod)
 - [Additional Resources](#additional-resources)
 
+## APIs
+
+The Kubernetes has various kinds of APIs for managing the cluster.
+
+- [Replica Set](./replicaset/)
+- [Deployment](./deployment/)
+- [Jobs](./jobs/)
+- [Service](./service/)
+- [Ingress](./ingress/)
+- [ConfigMap](./configmap/)
+
 ## Pod
 
 tl;dr: A pod is a environment for running containers, not a container itself.
@@ -30,11 +41,6 @@ We could deploy one or more Pods in a single Node. And the entire Kubernetes clu
 ![K8s cluster](./imgs/k8s_cluster.png)
 
 - [Execute pod](./pod-execution/)
-- [Replica Set](./replicaset/)
-- [Deployment](./deployment/)
-- [Jobs](./jobs/)
-- [Service](./service/)
-- [Ingress](./ingress/)
 
 ### Pod Scaling
 
