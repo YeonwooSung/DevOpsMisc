@@ -1,6 +1,8 @@
 # Kubernetes
 
-K8s(Kubernetes) is a container orchestration system. It is a system for managing containerized applications across multiple hosts. It provides basic mechanisms for deployment, maintenance, and scaling of applications.
+K8s(Kubernetes) is a container orchestration system.
+It is a system for managing containerized applications across multiple hosts.
+It provides basic mechanisms for deployment, maintenance, and scaling of applications.
 
 ## Table of Contents
 
@@ -17,6 +19,7 @@ The Kubernetes has various kinds of APIs for managing the cluster.
 - [Service](./service/)
 - [Ingress](./ingress/)
 - [ConfigMap](./configmap/)
+- [Volumes](./volumes/)
 
 ## Pod
 
