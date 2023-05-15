@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app
+spec:
+  containers:
+  - image: busybox
+    name: busybox
+    resources:
+        # Requests are what the container is guaranteed to get. (minimum)
+        requests:
+          memory: "50Mi"
+          cpu: "100m"
+        # Limits make sure a container never goes above a certain value. (maximum)
+        limits:
+          memory: "200Mi"
+          cpu: "500m"
+    volumeMounts:
+    - mountPath: /data
+      name: my-ebs-volume
+  volumes:
+  - name: my-ebs-volume
+    awsElasticBlockStore:
+      volumeID: "INSERT VOLUME ID HERE"
