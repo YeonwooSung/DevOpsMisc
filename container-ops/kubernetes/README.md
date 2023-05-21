@@ -99,6 +99,15 @@ StatefulSets are valuable for applications that require one or more of the follo
 
 - [Example StatefulSet for NGINX](./statefulset-nginx.yaml)
 
+## Metrics
+
+- [K8S metrics-server](https://github.com/kubernetes-sigs/metrics-server)
+- [Use Prometheus to monitor Kubernetes and applications running on Kubernetes](https://github.com/prometheus-operator/kube-prometheus)
+- K8S + Fluentd + Elasticsearch + Kibana
+    * [Kubernetes Fluentd](https://docs.fluentd.org/v/0.12/articles/kubernetes-fluentd)
+    * [Use Elasticsearch, Fluentd and Kibana on Red Hat OpenShift container platform for application log analysis](https://www.ibm.com/docs/ko/was-liberty/nd?topic=operator-analyzing-application-logs-red-hat-openshift)
+    * [EFK, Kubernetes Logging Stack 설치](https://velog.io/@seokbin/EFK-Kubernetes-Logging-Stack-%EC%84%A4%EC%B9%981)
+
 ## References
 
 - [K8S DaemonSet Official Doc](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
