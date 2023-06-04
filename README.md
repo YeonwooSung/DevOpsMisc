@@ -16,3 +16,7 @@ The miscellaneous codes for DevOps
 ## Workflows
 
 - [Airflow](./airflow/)
+
+## Web Servers
+
+- [nginx](./nginx/)
