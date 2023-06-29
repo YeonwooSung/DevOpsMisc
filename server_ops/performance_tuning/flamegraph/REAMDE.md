@@ -11,6 +11,11 @@ This was created by `Brendan Gregg`, and you could learn more about the flame gr
 
 ## FlameGraphs in Python
 
+There are several ways to generate flame graphs in python.
+Personally, I prefer using `py-spy` the most, since it is easy to use and the most intuitive tool.
+
+- [py-spy](https://github.com/benfred/py-spy)
+- [flask flamegraph](https://github.com/schireson/flask-flamegraph)
 - [python-benchmark-harness](https://github.com/JoeyHendricks/python-benchmark-harness)
     * [Reddit Post of using flamegraphs for python](https://www.reddit.com/r/Python/comments/mzaixf/this_is_how_you_can_generate_flame_graphs_from/)
 
