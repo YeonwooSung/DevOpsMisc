@@ -45,6 +45,12 @@ Due to it's asynchronous event-based approach, NGINX is not only used for Web Se
 It also has "HTTPS termination" feature, which lets many developers use NGINX as a HTTPS offloading server.
 It also has "HTTP/2" support, and TCP/UDP offloading feature.
 
+## Helpful Resources
+
+- [Avoiding the Top 10 NGINX Configuration Mistakes](https://www.nginx.com/blog/avoiding-top-10-nginx-configuration-mistakes/)
+- [Optimizing performance for Serving Content](https://docs.nginx.com/nginx/admin-guide/web-server/serving-static-content/#optimizing-performance-for-serving-content)
+- [Installing NGINX Plus](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-plus/)
+
 ## Useful Links
 
 - [Nginx HTTP server boilerplate configs](https://github.com/h5bp/server-configs-nginx)
