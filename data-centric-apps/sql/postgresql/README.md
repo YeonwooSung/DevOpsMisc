@@ -6,3 +6,13 @@ PostgreSQL features transactions with Atomicity, Consistency, Isolation, Durabil
 
 It is designed to handle a range of workloads, from single machines to data warehouses or Web services with many concurrent users.
 It was the default database for macOS Server and is also available for Linux, FreeBSD, OpenBSD, and Windows.
+
+## Queries for monitoring (DevOps)
+
+- [Run vacuum manually with verbose output](./monitoring/manual_verbose_vacuum.sql)
+- [Turn off autovacuum for a particular table](./monitoring/alter_table_turn_autovacuum_off.sql)
+- [Retrieve information about blocked and blocking processes in the database](./monitoring/retrieve_blocked_processes.sql)
+- [Retrieve]
+- [Get session information about currently running VACUUM](./monitoring/get_vacuum_info.sql)
+- [Get Top 20 oldest tables](./monitoring/get_20_oldest_tables.sql)
+- [Stop long query by terminating long query session](./monitoring/terminate_long_query_session.sql)
