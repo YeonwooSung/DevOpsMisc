@@ -13,9 +13,15 @@ The miscellaneous codes for DevOps
 - [Kubernetes](./container-ops/kubernetes)
 - [Docker](./container-ops/docker)
 
-## Workflows
+## Stream Processing and Workflows
 
-- [Airflow](./airflow/)
+### Workflow (DAGs)
+
+- [Airflow](./stream_processing_and_workflow/airflow/)
+
+### Stream Processing
+
+- [Kafka](./stream_processing_and_workflow/kafka/)
 
 ## Web Servers
 
