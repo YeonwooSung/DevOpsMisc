@@ -1,4 +1,4 @@
-opentelemetry-instrumentation==0.25b1
+opentelemetry-instrumentation==0.41b0
 opentelemetry-instrumentation-grpc==0.25b1
 opentelemetry-distro==0.25b1
 opentelemetry-exporter-otlp-proto-grpc==1.6.0
