@@ -5,4 +5,4 @@ opentelemetry-exporter-otlp-proto-grpc==1.6.0
 grpcio==1.53.0
 grpcio-tools==1.39.0
 googleapis-common-protos==1.53.0
-protobuf==3.18.0
+protobuf==3.18.3
