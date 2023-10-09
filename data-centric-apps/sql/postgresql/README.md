@@ -16,3 +16,8 @@ It was the default database for macOS Server and is also available for Linux, Fr
 - [Get session information about currently running VACUUM](./monitoring/get_vacuum_info.sql)
 - [Get Top 20 oldest tables](./monitoring/get_20_oldest_tables.sql)
 - [Stop long query by terminating long query session](./monitoring/terminate_long_query_session.sql)
+
+## Postgres based Interesting Projects
+
+**[CloudNative-PG](https://github.com/cloudnative-pg/cloudnative-pg)**:
+CloudNativePG is a Kubernetes operator that covers the full lifecycle of a PostgreSQL database cluster with a primary/standby architecture, using native streaming replication
