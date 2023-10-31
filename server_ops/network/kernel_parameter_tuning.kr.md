@@ -22,3 +22,45 @@
 | net.ipv4.tcp_orphan_retries | 서버 측에서 닫은 TCP 연결을 끊기 전에 확인하는 횟수 (기본값은 7로 50초에서 16분까지 소요) | 0 |
 | net.ipv4.tcp_sack | SYNC 패킷을 전송한 후 일부 ACK를 받지 못했을 경우 선택적으로 받지 못한 ACK 패킷을 받도록 설정 (0은 받지 않는 설정, 1은 패킷 유실이 많은 사이트에 설정) | 0 |
 | net.ipv4.tcp_fin_timeout | FIN 타임아웃을 시간을 줄여 FD를 빠르게 확보 | 15 |
+
+## backlog
+
+backlog는 물리적 네트워크 포트에서 패킷을 쌓아두는 커널의 큐 크기이다.
+백로그가 크기만큼 요청 패킷을 쌓아놓을 수 있으며, 백로그 큐가 가득차게 되면 설정에 따라 패킷이 drop 되는 등의 이슈가 발생할 수 있다.
+
+| 파라미터 | 설명 |
+| --- | --- |
+| net.core.netdev_max_backlog | 각 네트워크 장치 별로 커널이 처리하도록 쌓아두는 queue의 크기 |
+| net.core.somaxconn | listen으로 바인딩 된 서버 내에서 accept를 기다리는 소켓의 최대 수 |
+| net.ipv4.tcp_max_syn_backlog | SYN_RECEIVED 상태의 소켓(즉, connection incompleted)을 위한 queue |
+| net.ipv4.tcp_syncookies | 1로 설정하면 TCP 연결에서 SYN Backlog가 가득찼을때 SYN패킷을 SYN Backlog에 저장하지 않고 ISN(Initial Sequence Number 을 만들어서 SYN + ACK를 클라이언트로 전송하여 SYN 패킷 Drop 방지 |
+
+```bash
+# net.core.netdev_max_backlog의 값을 확인
+sysctl net.core.netdev_max_backlog
+
+# net.core.netdev_max_backlog의 값을 30,000으로 설정
+sudo sysctl -w net.core.netdev_max_backlog=30000
+
+# net.core.somaxconn 값 확인
+sysctl net.core.somaxconn
+
+# net.core.somaxconn 값을 4096으로 증가
+sudo sysctl -w net.core.somaxconn=4096
+
+# net.ipv4.tcp_max_syn_backlog 값 확인
+sysctl net.ipv4.tcp_max_syn_backlog
+
+# net.ipv4.tcp_max_syn_backlog 값을 4096으로 설정 (net.core.somaxconn 값이 최대값임)
+sudo sysctl -w net.ipv4.tcp_max_syn_backlog=4096
+
+# net.ipv4.tcp_syncookies 값을 확인
+sysctl net.ipv4.tcp_syncookies
+
+# net.ipv4.tcp_syncookies 값을 1로 설정 (true)
+#
+# 1로 설정하면 TCP 연결에서 SYN Backlog가 가득찼을때 SYN패킷을 SYN Backlog에 저장하지 않고
+# ISN(Initial Sequence Number 을 만들어서 SYN + ACK를 클라이언트로 전송하여 SYN 패킷 Drop 방지
+#
+sudo sysctl -w net.ipv4.tcp_syncookies=1
+```
