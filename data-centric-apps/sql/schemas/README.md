@@ -15,5 +15,8 @@ Let's learn how to design various cases of SQL schemas.
 - [E-commerce](./ecommerce/)
     - [Item Stock Management](./e_commerce/item_stock_management.sql)
 
+- [EMP](./emp/)
+    - [simple EMP schema with Adjacent List](./emp/simple_emp.sql)
+
 - [Subscription-based service](./subscription/)
     - [Subscription plans](./subscription/subscription_plans.sql)
