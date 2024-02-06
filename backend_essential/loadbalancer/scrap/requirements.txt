@@ -1,4 +1,4 @@
-fastapi==0.65.2
+fastapi==0.109.1
 prometheus-fastapi-instrumentator==5.7.1
 kazoo==2.8.0
 redis==3.5.3
