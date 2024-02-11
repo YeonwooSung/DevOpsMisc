@@ -2,7 +2,7 @@ opentelemetry-instrumentation==0.41b0
 opentelemetry-instrumentation-grpc==0.25b1
 opentelemetry-distro==0.25b1
 opentelemetry-exporter-otlp-proto-grpc==1.6.0
-grpcio==1.53.0
+grpcio==1.53.2
 grpcio-tools==1.39.0
 googleapis-common-protos==1.53.0
 protobuf==3.18.3
