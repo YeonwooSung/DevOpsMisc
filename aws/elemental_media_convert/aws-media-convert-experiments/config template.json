@@ -1,0 +1,12 @@
+{
+    "aws": {
+        "region": "AWS_REGION",
+        "endpoint": "AWS_MEDIA_CONVERT_ACCOUNT_API_ENDPOINT",
+        "jobQueueARN": "JOB_QUEUE_ARN",
+        "iamRoleARN": "IAM_ROLE_ARN",
+        "s3": {
+            "inputFile": "s3://INPUT_BUCKET/PATH_TO_INPUT_FILE",
+            "outputBucket": "s3://OUTPUT_BUCKET_NAME/"
+        }
+    }
+}
