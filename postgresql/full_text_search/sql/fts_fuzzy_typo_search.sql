@@ -12,6 +12,8 @@ FROM data_words
 WHERE similarity(word, 'balloon') > 0.4;
 
 
--- Use levenshtein distance to find similar words
+-- The levenstein distance is a measure of the similarity between two strings.
+-- To use the levenshtein distance, we need to create the fuzzystrmatch extension.
 CREATE EXTENSION fuzzystrmatch;
+-- Use levenshtein distance to find similar words
 select levenshtein('abc', 'abd');
