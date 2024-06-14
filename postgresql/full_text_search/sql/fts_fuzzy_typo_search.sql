@@ -7,8 +7,11 @@ CREATE EXTENSION pg_trgm;
 -- The similarity function returns a number that indicates how similar two strings are.
 -- The number is between 0 and 1, where 1 means the strings are identical.
 -- This function is based on the pg_trgm extension, which provides functions and operators for determining the similarity of text values based on trigram matching.
-SELECT to_tsquery('balloon |' ||
-                  string_agg(word, ' | ')
-       )
+SELECT to_tsquery('balloon |' || string_agg(word, ' | ') )
 FROM data_words
 WHERE similarity(word, 'balloon') > 0.4;
+
+
+-- Use levenshtein distance to find similar words
+CREATE EXTENSION fuzzystrmatch;
+select levenshtein('abc', 'abd');
