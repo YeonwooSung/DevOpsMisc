@@ -25,3 +25,7 @@ CloudNativePG is a Kubernetes operator that covers the full lifecycle of a Postg
 ## Aurora PostgreSQL supported extensions
 
 **[Extension versions for Amazon Aurora PostgreSQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/AuroraPostgreSQL.Extensions.html)**
+
+## PostgreSQL Best Practices
+
+- [How to Get the Most out of Postgres Memory Settings](https://tembo.io/blog/optimizing-memory-usage)
