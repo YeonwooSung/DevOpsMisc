@@ -17,11 +17,11 @@ The miscellaneous codes for DevOps
 
 ### Workflow (DAGs)
 
-- [Airflow](./stream_processing_and_workflow/airflow/)
+- [Airflow](./airflow/)
 
 ### Stream Processing
 
-- [Kafka](./stream_processing_and_workflow/kafka/)
+- [Kafka](./kafka/)
 
 ## Web Servers
 
